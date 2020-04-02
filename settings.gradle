@@ -1,0 +1,2 @@
+rootProject.name='AppMobile3A'
+include ':app'
