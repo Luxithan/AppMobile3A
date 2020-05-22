@@ -1,6 +1,6 @@
 package com.example.appmobile3a;
 
-public class Weakness {
+public class Resistances {
     private String type;
     private String value;
 

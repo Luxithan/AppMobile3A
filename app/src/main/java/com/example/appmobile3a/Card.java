@@ -20,9 +20,9 @@ public class Card {
     private String series;
     private String set;
     private String setCode;
-//    private List<Attack> attacks;
-//    private List<Resistance> resistances;
-//    private List<Weakness> weaknesses;
+    private List<Attacks> attacks;
+    private List<Resistances> resistances;
+    private List<Weaknesses> weaknesses;
 
     public String getId() {
         return id;
@@ -91,18 +91,18 @@ public class Card {
     public String getSetCode() {
         return setCode;
     }
-/*
-    public List<Attack> getAttacks() {
+
+    public List<Attacks> getAttacks() {
         return attacks;
     }
 
-    public List<Resistance> getResistances() {
+    public List<Resistances> getResistances() {
         return resistances;
     }
 
-    public List<Weakness> getWeaknesses() {
+    public List<Weaknesses> getWeaknesses() {
         return weaknesses;
     }
 
- */
+
 }
