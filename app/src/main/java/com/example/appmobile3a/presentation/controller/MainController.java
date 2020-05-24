@@ -1,15 +1,13 @@
 package com.example.appmobile3a.presentation.controller;
 
-import android.content.Context;
 import android.content.SharedPreferences;
 
 import com.example.appmobile3a.Constants;
-import com.example.appmobile3a.data.PokeCardApi;
+import com.example.appmobile3a.Singletons;
 import com.example.appmobile3a.presentation.model.Card;
 import com.example.appmobile3a.presentation.model.Deck;
 import com.example.appmobile3a.presentation.view.MainActivity;
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
@@ -18,8 +16,6 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainController {
 
@@ -46,14 +42,7 @@ public class MainController {
     }
 
     private void makeApiCall(){
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(Constants.BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create(gson))
-                .build();
-
-        PokeCardApi pokeCardApi = retrofit.create(PokeCardApi.class);
-
-        Call<Deck> call = pokeCardApi.getDeck();
+        Call<Deck> call = Singletons.getCardApi().getDeck();
         call.enqueue(new Callback<Deck>() {
             @Override
             public void onResponse(Call<Deck> call, Response<Deck> response) {

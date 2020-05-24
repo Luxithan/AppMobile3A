@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.example.appmobile3a.Constants;
 import com.example.appmobile3a.R;
+import com.example.appmobile3a.Singletons;
 import com.example.appmobile3a.data.PokeCardApi;
 import com.example.appmobile3a.presentation.controller.MainController;
 import com.example.appmobile3a.presentation.model.Card;
@@ -44,11 +45,8 @@ public class MainActivity extends AppCompatActivity {
 
         controller = new MainController(
                 this,
-                new GsonBuilder()
-                .setLenient()
-                .create(),
-                getSharedPreferences(Constants.KEY_APP_3A, Context.MODE_PRIVATE)
-);
+                Singletons.getGson(),
+                Singletons.getSharedPreferencesInstance(getApplicationContext()));
         controller.onStart();
 
     }
