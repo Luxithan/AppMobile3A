@@ -4,9 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.example.appmobile3a.Constants;
 import com.example.appmobile3a.R;
 import com.example.appmobile3a.Singletons;
 import com.example.appmobile3a.presentation.controller.MainController;
@@ -59,6 +61,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void navigateToDetails(Card card) {
-        Toast.makeText(getApplicationContext(), "TODO NAVIGATE", Toast.LENGTH_SHORT).show();
+        Intent myIntent = new Intent(MainActivity.this, DetailActivity.class);
+        myIntent.putExtra(Constants.KEY_CARD, Singletons.getGson().toJson(card));
+//        myIntent.putExtra("cardKeyHp", card.getHp());
+        MainActivity.this.startActivity(myIntent);
     }
 }
