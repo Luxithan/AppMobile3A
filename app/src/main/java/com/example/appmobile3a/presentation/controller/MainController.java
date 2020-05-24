@@ -85,11 +85,4 @@ public class MainController {
         view.navigateToDetails(card);
     }
 
-    public void onButtonAClick(){
-
-    }
-
-    public void onButtonBClick(){
-
-    }
 }

@@ -11,7 +11,7 @@ public class Card {
 //    private List<Type> types;
     private String supertype;
     private String subtype;
-    private String hp;          //A changer en Integer si besoin
+    private String hp;
 //    private List<Retreat> retreatCost;
     private Integer convertedRetreatCost;
     private String number;

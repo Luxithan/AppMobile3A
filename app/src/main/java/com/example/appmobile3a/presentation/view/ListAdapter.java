@@ -16,16 +16,11 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
     private List<Card> values;
     private OnItemClickListener listener;
 
-    // Provide a reference to the views for each data item
-    // Complex data items may need more than one view per item, and
-    // you provide access to all the views for a data item in a view holder
-
     public interface OnItemClickListener {
         void onItemClick(Card item);
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
-        // each data item is just a string in this case
         TextView txtHeader;
         TextView txtFooter;
         View layout;
@@ -48,7 +43,6 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
         notifyItemRemoved(position);
     }
 
-    // Provide a suitable constructor (depends on the kind of dataset)
     public ListAdapter(List<Card> myDataset, OnItemClickListener listener) {
         this.values = myDataset;
         this.listener = listener;
