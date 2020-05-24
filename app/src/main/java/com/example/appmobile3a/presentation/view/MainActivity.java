@@ -1,4 +1,4 @@
-package com.example.appmobile3a;
+package com.example.appmobile3a.presentation.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -9,15 +9,17 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.example.appmobile3a.Constants;
+import com.example.appmobile3a.R;
+import com.example.appmobile3a.data.PokeCardApi;
+import com.example.appmobile3a.presentation.model.Card;
+import com.example.appmobile3a.presentation.model.Deck;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
-import java.util.ArrayList;
 import java.util.List;
-
-import java.lang.reflect.*;
 
 import retrofit2.Call;
 import retrofit2.Callback;

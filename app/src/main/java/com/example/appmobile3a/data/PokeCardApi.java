@@ -1,4 +1,6 @@
-package com.example.appmobile3a;
+package com.example.appmobile3a.data;
+
+import com.example.appmobile3a.presentation.model.Deck;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

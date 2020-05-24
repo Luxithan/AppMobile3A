@@ -1,4 +1,4 @@
-package com.example.appmobile3a;
+package com.example.appmobile3a.presentation.view;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -6,6 +6,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.appmobile3a.R;
+import com.example.appmobile3a.presentation.model.Card;
 
 import java.util.List;
 

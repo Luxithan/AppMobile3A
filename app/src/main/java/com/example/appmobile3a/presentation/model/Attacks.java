@@ -1,4 +1,4 @@
-package com.example.appmobile3a;
+package com.example.appmobile3a.presentation.model;
 
 import java.util.List;
 
