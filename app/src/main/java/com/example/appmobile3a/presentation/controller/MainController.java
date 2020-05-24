@@ -82,7 +82,7 @@ public class MainController {
     }
 
     public void onItemClick(Card card){
-
+        view.navigateToDetails(card);
     }
 
     public void onButtonAClick(){
